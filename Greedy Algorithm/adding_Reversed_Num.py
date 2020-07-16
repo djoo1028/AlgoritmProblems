@@ -7,16 +7,17 @@ These are the reversed numbers you are to add. Two integers are less than 100,00
     
 '''
 
+# Decide how many input we will be received
 x = int(input())
 
-for i in range(x):
+for i in range(x): # iterate 
     a, b = input().split()
-    reverse_a = a[::-1]
-    reverse_b = b[::-1]
-    reverse_a = int(reverse_a)
-    reverse_b = int(reverse_b)
-    result = reverse_a + reverse_b
-    result = str(result)[::-1]
-    reuslt_final = int(result)
-    #reuslt_final = result.strip('0')
+    reverse_a = a[::-1] # reversed first input
+    reverse_b = b[::-1] # reversed second input
+    reverse_a = int(reverse_a) # When user type number it is string type so 
+    reverse_b = int(reverse_b) # if we want to calculate we have to convert to integer
+    result = reverse_a + reverse_b # calculation
+    result = str(result)[::-1] # reverse result of sum
+    reuslt_final = int(result) # convert to integer to remove zero when zero leads the result
+    #reuslt_final = result.strip('0') # this is another option when zero leads number
     print(reuslt_final)
